@@ -5,7 +5,7 @@
 
 function NonDigestPlugin() {}
 
-const CHUNKHASH_REGEX = /(-[a-z0-9]{20}\.{1}){1}/;
+const CHUNKHASH_REGEX = /(-[a-z0-9]{8,20}\.{1}){1}/;
 
 NonDigestPlugin.prototype.apply = function(compiler) {
   const emit = (compilation, callback) => {
